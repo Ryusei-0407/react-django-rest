@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  # web:
+  #   build:
+  #     context: ./web
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - 3000:3000
+  #   volumes:
+  #     - ./web:/app
+  #   networks:
+  #     - frontend
+  
+  restapi:
+    build:
+      context: ./restapi
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - ./restapi:/app
+    networks:
+      - backend
+    command: python manage.py runserver 0.0.0.0:8000
+
+networks:
+  # frontend:
+  backend:
