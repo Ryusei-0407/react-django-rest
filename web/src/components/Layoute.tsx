@@ -1,8 +1,8 @@
-import { ReactNode, VFC } from 'react'
-import { Link } from 'react-router-dom'
+import { ReactNode, VFC } from 'react';
+import { Link } from 'react-router-dom';
 
 interface Props {
-  children: ReactNode
+  children: ReactNode;
 }
 
 const Layout: VFC<Props> = ({ children }) => {
@@ -34,7 +34,7 @@ const Layout: VFC<Props> = ({ children }) => {
                 className="text-sm text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
                 to="/main-rtkit"
               >
-                Resux Tool Kit
+                Redux Tool Kit
               </Link>
             </div>
           </div>
@@ -44,7 +44,7 @@ const Layout: VFC<Props> = ({ children }) => {
         {children}
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
